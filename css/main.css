@@ -1,6 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   margin-top: 4rem;
   max-width: 800px;
+  z-index: 1;
 }
 
 .toc,
@@ -17,4 +25,16 @@
 
 .procedure li {
   margin-left: 2rem;
+}
+
+.nav-jump {
+  position: fixed;
+  bottom: 0;
+  right: 20%;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.toc a {
+  text-decoration: none;
 }
