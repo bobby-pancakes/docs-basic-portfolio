@@ -404,14 +404,9 @@ label > .label-body {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-  list-style-position: inside;
-}
-/* ol {
-  list-style-position: inside;
-} */
 ol,
 ul {
+  list-style-position: inside;
   padding-left: 0;
   margin-top: 0;
 }
@@ -424,6 +419,9 @@ ol ul {
 }
 li {
   margin-bottom: 1rem;
+}
+li p {
+  display: inline;
 }
 
 /* Code
@@ -541,6 +539,11 @@ there.
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .toc {
+    position: sticky;
+    max-height: 90vh;
+    overflow-y: scroll;
+  }
 }
 
 /* Larger than desktop */
@@ -549,58 +552,4 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-}
-
-/* Simple portfolio styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-body :not(:first-child) {
-  margin-top: 2rem;
-}
-
-.intro {
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px;
-}
-
-.intro-content {
-  padding: 50px;
-  position: relative;
-  z-index: 2;
-}
-
-.intro:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0.3;
-  background-image: url(../images/forest.JPG);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-}
-
-.job-list {
-  list-style-type: none;
-}
-
-.card {
-  padding: 0.5rem 1rem;
-  border: 1px solid;
-  border-radius: 3px;
-}
-
-.job .meta {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: baseline;
-  font-style: italic;
-  font-size: 2.2rem;
 }

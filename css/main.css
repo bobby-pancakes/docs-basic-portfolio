@@ -2,21 +2,45 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  color: #ffffff;
+  background: #333; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: #ffffff;
+  background: #333; /* Gecko Browsers */
+}
+
 .container {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-top: 4rem;
-  max-width: 800px;
   z-index: 1;
 }
 
-.toc,
+.content {
+  max-width: 800px;
+}
+
+.toc {
+  top: 4rem;
+  border-left: 2px solid #1eaedb;
+  padding-left: 1rem;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+
 .toc li,
 .toc ul {
   list-style-type: none;
   margin: 0;
   margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.toc ul {
+  margin-bottom: 1.5rem;
 }
 
 .toc li {
@@ -32,9 +56,24 @@ html {
   bottom: 0;
   right: 20%;
   background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   z-index: 10;
+}
+
+.nav-jump:hover {
+  color: #ffffff;
+  background-color: black;
 }
 
 .toc a {
   text-decoration: none;
+}
+
+.tip {
+  margin-left: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #1eaedb;
+  border-radius: 3px;
 }
