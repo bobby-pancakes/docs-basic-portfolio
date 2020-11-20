@@ -1,0 +1,20 @@
+.container {
+  margin-top: 4rem;
+  max-width: 800px;
+}
+
+.toc,
+.toc li,
+.toc ul {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.toc li {
+  margin-left: 1rem;
+}
+
+.procedure li {
+  margin-left: 2rem;
+}

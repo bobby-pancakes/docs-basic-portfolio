@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Publishing a simple web portfolio on Netlify</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/skeleton.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body class="vscode-body vscode-light">
+  <body class="container">
     <!-- omit in toc -->
     <h1 id="publishing-a-simple-web-portfolio-on-netlify">
       Publishing a simple web portfolio on Netlify
@@ -27,7 +30,7 @@
     </p>
     <!-- omit in toc -->
     <h2 id="process-overview">Process overview</h2>
-    <ul>
+    <ul class="toc">
       <li>
         <a href="#set-up-github">Set up GitHub</a>
         <ul>
@@ -101,7 +104,7 @@
       the details of git or GitHub in this walkthrough.
     </p>
     <h3 id="creating-a-github-account">Creating a GitHub account</h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           If you don't have a GitHub account, go to
@@ -131,7 +134,7 @@
       </li>
     </ol>
     <h3 id="creating-a-repo-in-github">Creating a repo in GitHub</h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           After signing into GitHub, on the home page (<a
@@ -230,7 +233,7 @@
     </p>
     <p>For further details refer to this section's resources.</p>
     <h3 id="creating-a-netlify-account">Creating a Netlify account</h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           Go to <a href="https://www.netlify.com/">Netlify.com</a> and click
@@ -261,7 +264,7 @@
     <h3 id="pointing-netlify-at-your-github-repository">
       Pointing Netlify at your GitHub repository
     </h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           In Netlify, on the <strong>Team overview</strong> page, select the
@@ -328,7 +331,7 @@
     </ul>
     <h2 id="set-up-your-local-workspace">Set up your local workspace</h2>
     <h3 id="install-vs-code">Install VS Code</h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           <a href="https://code.visualstudio.com/">Download</a> and install VS
@@ -361,7 +364,7 @@
       </li>
     </ol>
     <h3 id="creating-a-local-project">Creating a local project</h3>
-    <ol>
+    <ol class="procedure">
       <li>
         <p>
           Create a new folder for your portfolio website anywhere on your
@@ -403,27 +406,30 @@
           Copy and paste the following template into your index.html file, then
           save it.
         </p>
-        <pre><code class="language-HTML"><div><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My simple portfolio<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./css/normalize.css&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./css/skeleton.css&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./css/main.css&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;intro&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span> Simple portfolio site <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Agile development branding handshake ecosystem innovator hypotheses hackathon business-to-business startup series A financing. Product management gen-z founders marketing pivot branding gamification return on investment conversion user experience seed money agile development niche market technology. Ownership pitch early adopters startup equity iPhone buzz return on investment long tail holy grail. Long tail client ownership hackathon influencer.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;work&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Work experience<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</div></code></pre>
+        <pre>
+          <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;My simple portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/normalize.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/skeleton.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/main.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section class=&quot;intro&quot;&gt;
+      &lt;h1&gt; Simple portfolio site &lt;/h1&gt;
+      &lt;p&gt;Agile development branding handshake ecosystem innovator hypotheses hackathon business-to-business startup series A financing. Product management gen-z founders marketing pivot branding gamification return on investment conversion user experience seed money agile development niche market technology. Ownership pitch early adopters startup equity iPhone buzz return on investment long tail holy grail. Long tail client ownership hackathon influencer.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;work&quot;&gt;
+      &lt;h2&gt;Work experience&lt;/h2&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code>
+        </pre>
       </li>
       <li>
         <p>
