@@ -2,117 +2,150 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Publishing a simple web portfolio on Netlify</title>
+    <title>Basic portfolio docs</title>
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/skeleton.css" />
+    <!-- <link rel="stylesheet" href="./css/skeleton.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="container">
-    <div class="row">
-      <ul id="toc" class="toc four columns">
-        <li>
-          <a href="#publishing-a-simple-web-portfolio-on-netlify"
-            >Publishing a simple web portfolio on Netlify</a
-          >
-        </li>
-        <li>
-          <a href="#what-you-need">What you'll need</a>
-        </li>
-        <li>
-          <a href="#what-you-wont-need">What you won't need</a>
-        </li>
-        <li>
-          <a href="#set-up-github">Set up GitHub</a>
-          <ul>
-            <li>
-              <a href="#creating-a-github-account">Creating a GitHub account</a>
-            </li>
-            <li>
-              <a href="#creating-a-repo-in-github">Creating a repo in GitHub</a>
-            </li>
-            <li><a href="#resources">Resources</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#set-up-netlify">Set up Netlify</a>
-          <ul>
-            <li>
-              <a href="#creating-a-netlify-account"
-                >Creating a Netlify account</a
-              >
-            </li>
-            <li>
-              <a href="#pointing-netlify-at-your-github-repository"
-                >Pointing Netlify at your GitHub repository</a
-              >
-            </li>
-            <li><a href="#resources-1">Resources</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#set-up-your-local-workspace">Set up your local workspace</a>
-          <ul>
-            <li><a href="#install-vs-code">Install VS Code</a></li>
-            <li>
-              <a href="#creating-a-local-project">Creating a local project</a>
-            </li>
-            <li>
-              <a href="#previewing-your-site-locally"
-                >Previewing your site locally</a
-              >
-            </li>
-            <li>
-              <a href="#making-the-magic">Making the magic</a>
-            </li>
-            <li>
-              <a href="#vs-code-extensions">VS Code extensions</a>
-              <ul>
-                <li><a href="#utilities">Utilities</a></li>
-                <li><a href="#themes">Themes</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#resources-2">Resources</a>
-              <ul>
-                <li><a href="#html-links">HTML links</a></li>
-                <li><a href="#css-links">CSS links</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#add-your-html-and-css-to-your-github-repo"
-            >Add your HTML and CSS to your GitHub repo</a
-          >
-          <ul>
-            <li>
-              <a href="#uploading-your-files-to-github"
-                >Uploading your files to GitHub</a
-              >
-            </li>
-            <li><a href="#resources-3">Resources</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#review-your-live-website-and-make-changes-as-necessary"
-            >Review your live website and make changes as necessary</a
-          >
-          <ul>
-            <li>
-              <a href="#checking-your-site-publishing-status"
-                >Checking your site's publishing status</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#portfolio-examples">Portfolio examples</a>
-        </li>
-      </ul>
+  <body>
+    <!-- TODO: Create header with link to GitHub repo and the basic portfolio -->
+    <header>
+      <div>
+        <a href="https://wtd-basic-portfolio.netlify.app/"
+          >Basic web portfolio example</a
+        >
+      </div>
+      <div>
+        <a href="https://github.com/bobby-pancakes/docs-basic-portfolio"
+          >GitHub repo</a
+        >
+      </div>
+    </header>
 
-      <div class="content eight columns">
-        <!-- <a href="#toc"><button class="nav-jump">To TOC</button></a> -->
+    <div class="wrapper">
+      <aside id="toc" class="toc">
+        <h2>Table of contents</h2>
+        <ul class="toc-list">
+          <li>
+            <a href="#publishing-a-simple-web-portfolio-on-netlify"
+              >Publishing a simple web portfolio on Netlify</a
+            >
+          </li>
+          <li>
+            <a href="#what-you-need">What you'll need</a>
+          </li>
+          <li>
+            <a href="#what-you-wont-need">What you won't need</a>
+          </li>
+          <li>
+            <a href="#set-up-github">Set up GitHub</a>
+            <ul>
+              <li data-level="2">
+                <a href="#creating-a-github-account"
+                  >Creating a GitHub account</a
+                >
+              </li>
+              <li data-level="2">
+                <a href="#creating-a-repo-in-github"
+                  >Creating a repo in GitHub</a
+                >
+              </li>
+              <li data-level="2"><a href="#resources">Resources</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#set-up-netlify">Set up Netlify</a>
+            <ul>
+              <li data-level="2">
+                <a href="#creating-a-netlify-account"
+                  >Creating a Netlify account</a
+                >
+              </li>
+              <li data-level="2">
+                <a href="#pointing-netlify-at-your-github-repository"
+                  >Pointing Netlify at your GitHub repository</a
+                >
+              </li>
+              <li data-level="2"><a href="#resources-1">Resources</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#set-up-your-local-workspace"
+              >Set up your local workspace</a
+            >
+            <ul>
+              <li data-level="2">
+                <a href="#install-vs-code">Install VS Code</a>
+              </li>
+              <li data-level="2">
+                <a href="#creating-a-local-project">Creating a local project</a>
+              </li>
+              <li data-level="2">
+                <a href="#previewing-your-site-locally"
+                  >Previewing your site locally</a
+                >
+              </li>
+              <li data-level="2">
+                <a href="#making-the-magic">Making the magic</a>
+              </li>
+              <li data-level="2">
+                <a href="#vs-code-extensions">VS Code extensions</a>
+                <ul>
+                  <li data-level="3"><a href="#utilities">Utilities</a></li>
+                  <li data-level="3"><a href="#themes">Themes</a></li>
+                </ul>
+              </li>
+              <li data-level="2">
+                <a href="#resources-2">Resources</a>
+                <ul>
+                  <li data-level="3"><a href="#html-links">HTML links</a></li>
+                  <li data-level="3"><a href="#css-links">CSS links</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#add-your-html-and-css-to-your-github-repo"
+              >Add your HTML and CSS to your GitHub repo</a
+            >
+            <ul>
+              <li data-level="2">
+                <a href="#uploading-your-files-to-github"
+                  >Uploading your files to GitHub</a
+                >
+              </li>
+              <li data-level="2"><a href="#resources-3">Resources</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#review-your-live-website-and-make-changes-as-necessary"
+              >Review your live website and make changes as necessary</a
+            >
+            <ul>
+              <li data-level="2">
+                <a href="#checking-your-site-publishing-status"
+                  >Checking your site's publishing status</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#portfolio-examples">Portfolio examples</a>
+          </li>
+        </ul>
+      </aside>
 
+      <main class="content">
         <h1 id="publishing-a-simple-web-portfolio-on-netlify">
           Publishing a simple web portfolio on Netlify
         </h1>
@@ -755,7 +788,7 @@
             Effective layout that's easy to do without any JavaScript.
           </li>
         </ul>
-      </div>
+      </main>
     </div>
   </body>
 </html>
