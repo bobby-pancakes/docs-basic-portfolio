@@ -209,14 +209,23 @@ pre > code {
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body > header {
-  display: flex;
+  text-align: center;
   padding: 1em;
-  justify-content: space-around;
   background: rgba(0, 0, 0, 0.5);
 }
 
-body > header a {
+body > header > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+body > header a, body > header h1 {
   color: #ffffff;
+}
+
+body > header h1 {
+  margin: 0;
 }
 
 /* TOC
@@ -242,14 +251,6 @@ body > header a {
   }
 }
 
-.toc h2 {
-  margin: 0;
-  margin-bottom: 1em;
-  color: #ffffff;
-  font-size: 2.75rem;
-  border-bottom: 1px solid #ffffff;
-}
-
 .toc a {
   display: inline-block;
   color: #ffffff;
@@ -270,6 +271,7 @@ body > header a {
   text-decoration: none;
   transition: background-size 0.5s, box-shadow 0.75s;
   padding: 0.5em 1em;
+  padding-right: 0;
   box-shadow: none;
   border-radius: 0;
 }
@@ -291,7 +293,7 @@ body > header a {
 
 .toc ul.toc-list > li {
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: .25em;
 }
 
 .toc li {
@@ -304,8 +306,42 @@ body > header a {
   margin-bottom: 1em;
 }
 
-.toc li:hover {
-  background: ;
+.scroll-shadows {
+  --bgRGB: 67,146,244;
+  --bg: rgb(var(--bgRGB));
+  --bgTrans: rgba(var(--bgRGB), 0);
+  --shadow: rgba(41, 50, 56, 0.5);
+  overflow: auto;
+  background:
+    /* Shadow Cover TOP */
+    linear-gradient(
+      var(--bg) 30%,
+      var(--bgTrans)
+    ) center top,
+    
+    /* Shadow Cover BOTTOM */
+    linear-gradient(
+      var(--bgTrans), 
+      var(--bg) 70%
+    ) center bottom,
+    
+    /* Shadow TOP */
+    radial-gradient(
+      farthest-side at 50% 0,
+      var(--shadow),
+      rgba(0, 0, 0, 0)
+    ) center top,
+    
+    /* Shadow BOTTOM */
+    radial-gradient(
+      farthest-side at 50% 100%,
+      var(--shadow),
+      rgba(0, 0, 0, 0)
+    ) center bottom;
+  
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }
 
 /* Content styles
