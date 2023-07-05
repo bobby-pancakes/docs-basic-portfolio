@@ -1,6 +1,19 @@
 /* NOTE
 html is set to 62.5% so that all REM measurements are based on 10px sizing. Example: 1.5rem = 15px */
 
+:root {
+  --gradient1: #db1eae;
+  --gradient2: #d235bb;
+  --gradient3: #b559d7;
+  --gradient4: #837aee;
+  --gradient5: #4392f4;
+  --gradient6: #00a2eb;
+  --gradient7: #03abe0;
+  --gradient8: #1eaedb;
+  --color-font: #222222;
+  --color-white: #f9f5fb;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -12,16 +25,16 @@ body {
   font-weight: 400;
   font-family: "IBM Plex Sans", "HelveticaNeue", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
-  color: #222;
+  color: var(--color-font);
   background: conic-gradient(from 0deg at 50% -10%,
-      #db1eae,
-      #d235bb,
-      #b559d7,
-      #837aee,
-      #4392f4,
-      #00a2eb,
-      #03abe0,
-      #1eaedb);
+      var(--gradient1),
+      var(--gradient2),
+      var(--gradient3),
+      var(--gradient4),
+      var(--gradient5),
+      var(--gradient6),
+      var(--gradient7),
+      var(--gradient8));
   box-sizing: border-box;
 }
 
@@ -33,14 +46,14 @@ samp {
 }
 
 ::selection {
-  color: #ffffff;
-  background: #837aee;
+  color: var(--color-white);
+  background: var(--gradient4);
   /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-  color: #ffffff;
-  background: #837aee;
+  color: var(--color-white);
+  background: var(--gradient4);
   /* Gecko Browsers */
 }
 
@@ -134,11 +147,11 @@ p.first-paragraph {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   display: inline-block;
-  background: linear-gradient(to bottom, #0fa0ce 0%, #0fa0ce 100%);
+  background: linear-gradient(to bottom, var(--gradient7) 0%, var(--gradient7) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
-  color: #333333;
+  color: var(--color-font);
   text-decoration: none;
   border-radius: 3px;
   transition: background-size 0.4s, color 0.6s, box-shadow 0.4s, padding 0.4s,
@@ -146,7 +159,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--color-white);
   background-size: 4px 50px;
   box-shadow: 0 8px 6px -6px black;
   padding: 0 0.25em;
@@ -203,8 +216,8 @@ code {
   margin: 0 0.2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #f1f1f1;
-  border: 1px solid #e1e1e1;
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
   border-radius: 4px;
 }
 
@@ -236,7 +249,7 @@ body>header {
 
 body>header a,
 body>header h1 {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 body>header h1 {
@@ -254,13 +267,13 @@ header .header-navigation-item {
   padding: 1.25em 0;
   height: 100%;
   border: solid 1px;
-  border-color: #ffffff;
+  border-color: var(--color-white);
   border-bottom: solid 0px;
   border-radius: 0;
 }
 
 header a {
-  background: linear-gradient(to bottom, #b559d7 0%, #4392f4 100%);
+  background: linear-gradient(to bottom, var(--gradient3) 0%, var(--gradient5) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2px 2px;
@@ -270,7 +283,6 @@ header a:hover {
   background-size: 4px 100%;
   padding: 1.25em 0;
   margin: 0;
-  /* background: linear-gradient(to bottom, #4392f4 0%, #b559d7 100%); */
 }
 
 /* TOC
@@ -298,12 +310,12 @@ header a:hover {
 
 .toc a {
   display: inline-block;
-  color: #ffffff;
+  color: var(--color-white);
   width: 100%;
   background: linear-gradient(90deg,
-      #4392f4,
-      #837aee,
-      #b559d7);
+      var(--gradient5),
+      var(--gradient4),
+      var(--gradient3));
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 0%;
@@ -322,7 +334,7 @@ header a:hover {
 
 .toc li[data-level="2"] a,
 .toc li[data-level="3"] a {
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid var(--color-white);
 }
 
 .toc ul {
@@ -405,7 +417,7 @@ header a:hover {
   margin-left: 2em;
   padding: 1em 2em;
   background-color: rgba(30, 174, 219, 0.1);
-  border-left: 5px solid #1eaedb;
+  border-left: 5px solid var(--gradient8);
   border-radius: 3px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -417,7 +429,7 @@ header a:hover {
   margin: 1em 2em;
   padding: 1em 2em;
   background-color: rgba(51, 51, 51, 0.1);
-  border-left: 5px solid #333;
+  border-left: 5px solid var(--color-font);
   border-radius: 3px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -427,4 +439,32 @@ header a:hover {
   display: inline-block;
   margin: 0;
   padding: 0 0.25em;
+}
+
+/* 
+#db1eae,
+#d235bb,
+#b559d7,
+#837aee,
+#4392f4,
+#00a2eb,
+#03abe0,
+#1eaedb 
+*/
+
+section.topic {
+  border-right: solid .5em;
+  margin-right: -1.5em;
+}
+
+section.topic:nth-of-type(1n) {
+  border-color: var(--gradient8);
+}
+
+section.topic:nth-of-type(2n) {
+  border-color: var(--gradient6);
+}
+
+section.topic:nth-of-type(3n) {
+  border-color: var(--gradient5);
 }
