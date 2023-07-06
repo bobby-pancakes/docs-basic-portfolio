@@ -26,15 +26,17 @@ body {
   font-family: "IBM Plex Sans", "HelveticaNeue", "Helvetica Neue", Helvetica,
     Arial, sans-serif;
   color: var(--color-font);
-  background: conic-gradient(from 0deg at 50% -10%,
-      var(--gradient1),
-      var(--gradient2),
-      var(--gradient3),
-      var(--gradient4),
-      var(--gradient5),
-      var(--gradient6),
-      var(--gradient7),
-      var(--gradient8));
+  background: conic-gradient(
+    from 0deg at 50% -10%,
+    var(--gradient1),
+    var(--gradient2),
+    var(--gradient3),
+    var(--gradient4),
+    var(--gradient5),
+    var(--gradient6),
+    var(--gradient7),
+    var(--gradient8)
+  );
   box-sizing: border-box;
 }
 
@@ -154,7 +156,11 @@ li p img {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   display: inline-block;
-  background: linear-gradient(to bottom, var(--gradient7) 0%, var(--gradient7) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--gradient7) 0%,
+    var(--gradient7) 100%
+  );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -231,7 +237,7 @@ code {
   border-radius: 4px;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre-wrap;
@@ -251,18 +257,18 @@ pre>code {
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body>header {
+body > header {
   text-align: center;
   padding-top: 1em;
   background: rgba(0, 0, 0, 0.5);
 }
 
-body>header a,
-body>header h1 {
+body > header a,
+body > header h1 {
   color: var(--color-white);
 }
 
-body>header h1 {
+body > header h1 {
   margin: 1em 0;
 }
 
@@ -283,7 +289,11 @@ header .header-navigation-item {
 }
 
 header a {
-  background: linear-gradient(to bottom, var(--gradient3) 0%, var(--gradient5) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--gradient3) 0%,
+    var(--gradient5) 100%
+  );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2px 2px;
@@ -322,10 +332,12 @@ header a:hover {
   display: inline-block;
   color: var(--color-white);
   width: 100%;
-  background: linear-gradient(90deg,
-      var(--gradient5),
-      var(--gradient4),
-      var(--gradient3));
+  background: linear-gradient(
+    90deg,
+    var(--gradient5),
+    var(--gradient4),
+    var(--gradient3)
+  );
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 0%;
@@ -352,9 +364,9 @@ header a:hover {
   margin: 0;
 }
 
-.toc ul.toc-list>li {
+.toc ul.toc-list > li {
   margin-left: 0;
-  margin-top: .25em;
+  margin-top: 0.25em;
 }
 
 .toc li {
@@ -363,7 +375,7 @@ header a:hover {
   line-height: 1.3em;
 }
 
-.toc>li:last-child {
+.toc > li:last-child {
   margin-bottom: 1em;
 }
 
@@ -374,23 +386,23 @@ header a:hover {
   --shadow: rgba(41, 50, 56, 0.5);
   overflow: auto;
   background:
-    /* Shadow Cover TOP */
-    linear-gradient(var(--bg) 30%,
-      var(--bgTrans)) center top,
-
-    /* Shadow Cover BOTTOM */
-    linear-gradient(var(--bgTrans),
-      var(--bg) 70%) center bottom,
-
+    /* Shadow Cover TOP */ linear-gradient(
+        var(--bg) 30%,
+        var(--bgTrans)
+      )
+      center top,
+    /* Shadow Cover BOTTOM */ linear-gradient(var(--bgTrans), var(--bg) 70%)
+      center bottom,
     /* Shadow TOP */
-    radial-gradient(farthest-side at 50% 0,
-      var(--shadow),
-      rgba(0, 0, 0, 0)) center top,
-
+      radial-gradient(farthest-side at 50% 0, var(--shadow), rgba(0, 0, 0, 0))
+      center top,
     /* Shadow BOTTOM */
-    radial-gradient(farthest-side at 50% 100%,
-      var(--shadow),
-      rgba(0, 0, 0, 0)) center bottom;
+      radial-gradient(
+        farthest-side at 50% 100%,
+        var(--shadow),
+        rgba(0, 0, 0, 0)
+      )
+      center bottom;
 
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
@@ -422,11 +434,11 @@ header a:hover {
   margin-top: 1em;
 }
 
-.procedure>li {
+.procedure > li {
   margin-left: 2em;
 }
 
-.procedure>li ul li {
+.procedure > li ul li {
   list-style-type: disc;
 }
 
@@ -453,19 +465,8 @@ header a:hover {
   padding: 0 0.25em;
 }
 
-/* 
-#db1eae,
-#d235bb,
-#b559d7,
-#837aee,
-#4392f4,
-#00a2eb,
-#03abe0,
-#1eaedb 
-*/
-
 section.topic {
-  border-right: solid .5em;
+  border-right: solid 0.5em;
   margin-right: -1.5em;
 }
 

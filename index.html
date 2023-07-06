@@ -1,566 +1,601 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic portfolio docs</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Basic portfolio docs</title>
-  <link rel="stylesheet" href="./css/normalize.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <h1>Publish a Web Portfolio Directly to Netlify</h1>
 
-<body>
-  <header>
-    <h1>
-      Publish a Web Portfolio Directly to Netlify
-    </h1>
+      <div class="header-navigation">
+        <a
+          class="header-navigation-item"
+          href="https://wtd-basic-portfolio.netlify.app/"
+          >Basic web portfolio example</a
+        >
+        <a class="header-navigation-item" href="./pages/netlify-and-github.html"
+          >Publish with Netlify and GitHub</a
+        >
+        <a
+          class="header-navigation-item"
+          href="https://github.com/bobby-pancakes/docs-basic-portfolio"
+          >GitHub repo</a
+        >
+      </div>
+    </header>
 
-    <div class="header-navigation">
-      <a class="header-navigation-item"
-        href="https://wtd-basic-portfolio.netlify.app/">Basic web portfolio
-        example</a>
-      <a class="header-navigation-item"
-        href="./pages/netlify-and-github.html">Publish with Netlify and
-        GitHub</a>
-      <a class="header-navigation-item"
-        href="https://github.com/bobby-pancakes/docs-basic-portfolio">GitHub
-        repo</a>
-    </div>
-  </header>
-
-  <div class="wrapper">
-    <aside id="toc" class="toc scroll-shadows">
-      <ul class="toc-list">
-        <li>
-          <a href="#what-you-need">What you'll need</a>
-        </li>
-        <li>
-          <a href="#what-you-wont-need">What you won't need</a>
-        </li>
-        <li>
-          <a href="#set-up-your-local-workspace">Set up your local workspace</a>
-          <ul>
-            <li data-level="2">
-              <a href="#install-vs-code">Install VS Code</a>
-            </li>
-            <li data-level="2">
-              <a href="#create-a-local-project">Create a local project</a>
-            </li>
-            <li data-level="2">
-              <a href="#preview-your-site-locally">Preview your site
-                locally</a>
-            </li>
-            <li data-level="2">
-              <a href="#making-the-magic">Making the magic</a>
-            </li>
-            <li data-level="2">
-              <a href="#vs-code-extensions">VS Code extensions</a>
-              <ul>
-                <li data-level="3"><a href="#utilities">Utilities</a></li>
-                <li data-level="3"><a href="#themes">Themes</a></li>
-              </ul>
-            </li>
-            <li data-level="2">
-              <a href="#resources-2">Resources</a>
-              <ul>
-                <li data-level="3"><a href="#html-links">HTML links</a></li>
-                <li data-level="3"><a href="#css-links">CSS links</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#set-up-netlify">Set up Netlify</a>
-          <ul>
-            <li data-level="2">
-              <a href="#upload-to-netlify">Upload to Netlify</a>
-            </li>
-            <li data-level="2"><a href="#resources-1">Resources</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#review-your-live-website-and-make-changes-as-necessary">Review
-            your site</a>
-          <ul>
-            <li data-level="2">
-              <a href="#check-your-site-publishing-status">Check your
-                site's publishing status</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#portfolio-examples">Portfolio examples</a>
-        </li>
-      </ul>
-    </aside>
-
-    <main class="content">
-      <p class="first-paragraph">This guide shows you how to create a portfolio
-        website and upload it
-        directly to Netlify. By the end of this
-        guide,
-        you'll have a functioning website that anyone with internet access can
-        visit.
-      </p>
-      <p>There are two versions of this guide: this one for uploading your
-        portfolio directly to Netlify, and
-        another one for using Netlify and GitHub. If you don't want to deal with
-        Git,
-        stay on this page. If you want to use a Git workflow and continuous
-        deployment check out the <a href="./pages/netlify-and-github.html">other
-          version</a>.
-      </p>
-      <p>
-        You don't need to follow this guide exactly. If you know what
-        you're doing, skip around. The worst thing that can happen is your
-        site doesn't go live. Which means you get to troubleshoot and make it
-        better. ✨
-      </p>
-
-      <section class="topic">
-        <h2 id="what-you-need">What you will need</h2>
-        <p>
-          In this guide, I'll use Visual Studio Code
-          (VS Code) and Netlify. If you want to use a different text editor or
-          other tool/service, go for it!
-        </p>
-        <ul>
-          <li>Netlify account</li>
-          <li>Text editor</li>
-          <li>Basic HTML</li>
-          <li>Basic CSS</li>
-        </ul>
-
-        <h2 id="what-you-wont-need">What you won't need</h2>
-        <ul>
-          <li>Paid tools or services</li>
-          <li>JavaScript</li>
-          <li>Command line</li>
-          <li>Servers</li>
-          <li>CMS</li>
-        </ul>
-      </section>
-
-      <section class="topic">
-        <h2 id="set-up-your-local-workspace">Set up your local workspace</h2>
-
-        <p>To get started on your portfolio site, you need to the right tools.
-          These are all free tools that are commonly used by professionals, but
-          you don't need any experience to get started with them.
-        </p>
-
-        <h3 id="install-vs-code">Install VS Code</h3>
-        <ol class="procedure">
+    <div class="wrapper">
+      <aside id="toc" class="toc scroll-shadows">
+        <ul class="toc-list">
           <li>
-            <p>
-              <a href="https://code.visualstudio.com/">Download</a> and install
-              VS Code.
-            </p>
+            <a href="#what-you-need">What you'll need</a>
           </li>
           <li>
-            <p>
-              Open VS Code, and select the extensions icon
-              (<img src="./images/extension.png" alt=""
-                title="Live Server icon" />)
-              from the left-hand menu.
-            </p>
+            <a href="#what-you-wont-need">What you won't need</a>
           </li>
           <li>
-            <p>
-              Search for &quot;live server&quot; and install the Live Server
-              extension.
-            </p>
-
-            <img src="./images/live-server.png"
-              alt="You can find the live server extension in VS Code's extension marketplace."
-              title="Live server extension" />
-          </li>
-        </ol>
-
-        <h3 id="create-a-local-project">Create a local project</h3>
-        <p>
-          Now that you have VS Code installed, it's time to set up a project. I
-          put together a starter for you as a basic reference.
-        </p>
-
-        <h4>Download a GitHub project</h4>
-        <ol class="procedure">
-          <li>
-            <p>
-              Go to the
-              <a
-                href="https://github.com/bobby-pancakes/basic-portfolio">WTD-basic-portfolio</a>
-              created by user Bobby Pancakes (an alias I created for this
-              project).
-            </p>
-          </li>
-          <li>
-            <p>Click the green Code button, then select <span
-                class="bold">Download ZIP</span>.</p>
-          </li>
-          <li>
-            <p>
-              Extract the downloaded folder somewhere on your local computer.
-            </p>
-          </li>
-          <li>
-            <p>
-              In VS Code, open the downloaded project. It should look something
-              like this:
-            </p>
-            <img src="./images/project.png" alt="Project structure"
-              title="Project structure" />
-          </li>
-        </ol>
-
-        <h4 id="preview-your-site-locally">Preview your site locally</h4>
-        <p>
-          One benefit of web development is quickly seeing how your changes
-          affect your site. With the Live Server extension installed, you can
-          preview your site before you upload it to GitHub. Read on to see how.
-        </p>
-        <ol class="procedure">
-          <li>
-            <p>
-              In VS Code, right-click the <span
-                class="italicize">index.html</span> file the left-hand
-              navigation, then select <span class="bold">Open with Live
-                Server</span>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Live Server should automatically open a new tab in your browser
-              and you'll see your site. If not, enter
-              <code>localhost:&#60;portNumber></code> in your browser's URL bar.
-              Replace <code>&#60;portNumber></code> with the port number you can
-              find in VS Code:
-            </p>
-            <img src="./images/port.png"
-              alt="Live Server indicates which port you can preview your site on."
-              title="Live Server port" />
-            <p class="admonition note">
-              <span class="bold">Note:</span> Typically, Live Server uses
-              <code>localhost:5000</code>, but it'll be
-              different if something else is using the default port. You can
-              find your port in VS Code's lower-right status
-              bar.
-            </p>
-          </li>
-        </ol>
-
-        <h4 id="making-the-magic">Making the magic</h4>
-        <p>
-          This is where you get creative. Start with the design and layout or
-          write your content, then design around it. This is your portfolio,
-          build it however you want. If you're not sure where to start, take a
-          look at this section's resources and the
-          <a href="#portfolio-examples">Portfolio examples</a> section.
-        </p>
-
-        <p>
-          When you're ready, move on to
-          <a href="#upload-to-netlify">Upload your site to Netlify</a>.
-        </p>
-
-        <h3 id="vs-code-extensions">VS Code extensions</h3>
-        <p>
-          There are many useful VS Code extensions. Here are some that I
-          recommend.
-        </p>
-
-        <h4 id="utilities">Utilities</h4>
-        <ul>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a>.
-            A linter
-            that supports auto formatting for many programming
-            languages.
-          </li>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Live
-              Server</a>. Makes it easy to preview your website on your laptop.
-          </li>
-        </ul>
-
-        <h4 id="themes">Themes</h4>
-        <ul>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda">Panda
-              Theme</a>
-          </li>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code">Nord</a>
-          </li>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=huytd.nord-light">Nord
-              Light</a>
-          </li>
-          <li>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme">One
-              Dark Pro</a>
-          </li>
-        </ul>
-
-        <h3 id="resources-2">Resources</h3>
-
-        <h4 id="html-links">HTML</h4>
-        <ul>
-          <li>
-            <a href="https://meettheipsums.com/">Meet the Ipsums</a>. A
-            collection of Lorem Ipsum generators from around the internet.
-          </li>
-          <li>
-            <a
-              href="https://www.freecodecamp.org/news/semantic-html5-elements/">FreeCodeCamp
-              article about semantic
-              HTML5</a>. This is a good primer for HTML5 elements and how, why,
-            and when
-            you should use them.
-          </li>
-          <li>
-            <a href="https://www.w3.org/People/Raggett/book4/ch02.html">W3
-              chapter
-              about the history of the internet</a>.
-            If you want to take a deep dive into why HTML is the way it is.
-          </li>
-        </ul>
-
-        <h4 id="css-links">CSS</h4>
-        <ul>
-          <li>
-            <a href="https://gridbyexample.com/">Grid by Example</a>. Fantastic
-            resource for learning CSS Grid, which I highly recommend.
-          </li>
-          <li>
-            <a href="https://colordesigner.io/">Color Designer</a>. A great free
-            web-based tool for building color themes. Also, check out
-            <a href="http://colormind.io/">Colormind</a>.
-          </li>
-          <li>
-            <a href="https://css-tricks.com/">CSS Tricks</a>. One of the best
-            places to learn about CSS. Extensive library of articles about
-            anything you could think of - almost always with examples.
-          </li>
-        </ul>
-      </section>
-
-      <section class="topic">
-        <h2 id="set-up-netlify">Set up Netlify</h2>
-
-        <p>
-          Netlify will host your web portfolio for free. If you have your own
-          domain name, you can set up Netlify to work with it. If you don't,
-          Netlify will give you a Netlify sub-domain for free.
-        </p>
-        <p class="admonition">
-          <span class="bold">Tip:</span> Netlify offers automatic
-          <a
-            href="https://docs.netlify.com/domains-https/https-ssl/#certificate-service-types">free
-            HTTPS
-            certificates</a>
-          for sites hosted on their platform with custom domains.
-        </p>
-        <p>For further details refer to this section's resources.</p>
-
-        <h3 id="upload-to-netlify">Upload your site to Netlify</h3>
-        <ol class="procedure">
-          <li>
-            <p>
-              Go to <a href="https://app.netlify.com">Netlify.com and select
-                <span class="bold">Sign up</span></a>.
-            </p>
-          </li>
-          <li>
-            <p>Select <span class="bold">Sign up for free</span>, then <span
-                class="bold">Sign up with email</span>.</p>
-          </li>
-          <li>
-            <p>Enter your email address and desired password, then select <span
-                class="bold">Sign up</span>.</p>
-          </li>
-          <li>
-            <p>Find the email that Netlify sent to your email address and select
-              <span class="bold">Verify email</span>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Fill out the form, then select <span class="bold">Continue to
-                deploy</span>.
-            </p>
-          </li>
-          <li>
-            <p>
-              On the next page, under <span class="bold">Get started another
-                way</span>, select <span class="bold">Try Netlify Drop</span>.
-            </p>
-          </li>
-          <li>
-            <p>Upload your website's folder by draggin and drop or selecting
-              <span class="bold">browse to upload</span>.
-            </p>
-            <p>Netlify will automatically host your site for you with a random
-              site name on a Netlify subdomain.</p>
-          </li>
-        </ol>
-
-        <h3 id="resources-1">Resources</h3>
-        <ul>
-          <li>
-            <a href="https://docs.netlify.com/">Netlify docs</a>
-          </li>
-          <li>
-            <a
-              href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/">Setting
-              up your own
-              domain name on Netlify</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="topic">
-        <h2 id="review-your-live-website-and-make-changes-as-necessary">
-          Review your live website and make changes as necessary
-        </h2>
-        <p>
-          After you've uploaded your HTML, CSS, and any other files (like images
-          and sample docs), Netlify will make your site available on the
-          internet.
-        </p>
-        <p>
-          To update your site, you'll need to upload all of your site's files
-          again.
-        </p>
-
-        <h3 id="check-your-site-publishing-status">
-          Check your site's publishing status
-        </h3>
-        <ol class="procedure">
-          <li>
-            <p>
-              In Netlify, on the <span class="bold">Sites</span> tab, select
-              your site, then select <span class="bold">Deploys</span>.
-            </p>
-            <img src="./images/deploy.png" alt="Netlify shows deploy statuses."
-              title="Netlify deploy status" />
-          </li>
-          <li>
-            <p>
-              Check the status of the latest deploy. It should have one of the
-              following tags:
-            </p>
-
+            <a href="#set-up-your-local-workspace"
+              >Set up your local workspace</a
+            >
             <ul>
-              <li>
-                <p>
-                  <span class="bold">Published.</span> Successfully deployed and
-                  ready to
-                  view at your site's URL.
-                </p>
+              <li data-level="2">
+                <a href="#install-vs-code">Install VS Code</a>
               </li>
-              <li>
-                <p>
-                  <span class="bold">Building.</span> Processing your site's
-                  files
-                  and setting up deployment.
-                </p>
+              <li data-level="2">
+                <a href="#create-a-local-project">Create a local project</a>
               </li>
-              <li>
-                <p>
-                  <span class="bold">Failed.</span> Something didn't work. Check
-                  the
-                  deployment logs for details.
-                </p>
+              <li data-level="2">
+                <a href="#preview-your-site-locally"
+                  >Preview your site locally</a
+                >
+              </li>
+              <li data-level="2">
+                <a href="#making-the-magic">Making the magic</a>
+              </li>
+              <li data-level="2">
+                <a href="#vs-code-extensions">VS Code extensions</a>
+                <ul>
+                  <li data-level="3"><a href="#utilities">Utilities</a></li>
+                  <li data-level="3"><a href="#themes">Themes</a></li>
+                </ul>
+              </li>
+              <li data-level="2">
+                <a href="#resources-2">Resources</a>
+                <ul>
+                  <li data-level="3"><a href="#html-links">HTML links</a></li>
+                  <li data-level="3"><a href="#css-links">CSS links</a></li>
+                </ul>
               </li>
             </ul>
           </li>
-        </ol>
-        <p>
-          After your site is published, all you need to do is refresh your
-          browser to see the updates.
-        </p>
-
-        <h3 id="view-your-portfolio">View your portfolio</h3>
-        <p>
-          Well, you did all of that work. So, how do you view it? If you didn't
-          set up a custom domain name, Netlify automatically creates a random
-          URL for your website. This URL won't change after it's assigned to
-          your site.
-        </p>
-        <ol class="procedure">
           <li>
-            <p>
-              In Netlify, on the <span class="bold">Site overview</span> tab,
-              find the
-              site information card.
-            </p>
-            <img src="./images/site-url.png" alt="Netlify site URL location."
-              title="Netlify site URL" />
+            <a href="#set-up-netlify">Set up Netlify</a>
+            <ul>
+              <li data-level="2">
+                <a href="#upload-to-netlify">Upload to Netlify</a>
+              </li>
+              <li data-level="2"><a href="#resources-1">Resources</a></li>
+            </ul>
           </li>
           <li>
-            <p>
-              Click the link in the site information card, or copy it and share
-              it with others.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="topic">
-        <h2 id="portfolio-examples">Portfolio examples</h2>
-        <p>
-          Here are some portfolio examples you can draw inspiration from.
-          They all have strong design and good UX.
-        </p>
-        <p>
-          I don't know any of these people. I came across their sites by
-          googling for relevant portfolios.
-        </p>
-        <ul>
-          <li>
-            <a href="https://www.stephanieodili.com">Stephanie Chizoba
-              Odili</a>.
-            <p>
-              Basic, but effective design. Could easily be done with just HTML
-              and CSS.
-            </p>
+            <a href="#review-your-live-website-and-make-changes-as-necessary"
+              >Review your site</a
+            >
+            <ul>
+              <li data-level="2">
+                <a href="#check-your-site-publishing-status"
+                  >Check your site's publishing status</a
+                >
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="https://www.straygoat.co.uk/">Craig Wright - Freelance
-              Technical Writer</a>.
-            <p>
-              Comprehensive website that could be made with just HTML. Includes
-              a portfolio, case studies, and other content
-            </p>
-          </li>
-          <li>
-            <a href="https://www.kaylalewkowicz.com/">Kayla Lewkowicz</a>.
-            <p>Effective layout that's easy to do without any JavaScript.</p>
-          </li>
-          <li>
-            <a href="https://www.chelsealpalmer.com/home/">Chelsea Palmer</a>.
-            <p>Elegant layout with some fun style. No JavaScript required.</p>
+            <a href="#portfolio-examples">Portfolio examples</a>
           </li>
         </ul>
-      </section>
+      </aside>
 
-    </main>
-  </div>
-</body>
+      <main class="content">
+        <p class="first-paragraph">
+          This guide shows you how to create a portfolio website and upload it
+          directly to Netlify. By the end of this guide, you'll have a
+          functioning website that anyone with internet access can visit.
+        </p>
+        <p>
+          There are two versions of this guide: this one for uploading your
+          portfolio directly to Netlify, and another one for using Netlify and
+          GitHub. If you don't want to deal with Git, stay on this page. If you
+          want to use a Git workflow and continuous deployment check out the
+          <a href="./pages/netlify-and-github.html">other version</a>.
+        </p>
+        <p>
+          You don't need to follow this guide exactly. If you know what you're
+          doing, skip around. The worst thing that can happen is your site
+          doesn't go live. Which means you get to troubleshoot and make it
+          better. ✨
+        </p>
 
+        <section class="topic">
+          <h2 id="what-you-need">What you will need</h2>
+          <p>
+            In this guide, I'll use Visual Studio Code (VS Code) and Netlify. If
+            you want to use a different text editor or other tool/service, go
+            for it!
+          </p>
+          <ul>
+            <li>Netlify account</li>
+            <li>Text editor</li>
+            <li>Basic HTML</li>
+            <li>Basic CSS</li>
+          </ul>
+
+          <h2 id="what-you-wont-need">What you won't need</h2>
+          <ul>
+            <li>Paid tools or services</li>
+            <li>JavaScript</li>
+            <li>Command line</li>
+            <li>Servers</li>
+            <li>CMS</li>
+          </ul>
+        </section>
+
+        <section class="topic">
+          <h2 id="set-up-your-local-workspace">Set up your local workspace</h2>
+
+          <p>
+            To get started on your portfolio site, you need to the right tools.
+            These are all free tools that are commonly used by professionals,
+            but you don't need any experience to get started with them.
+          </p>
+
+          <h3 id="install-vs-code">Install VS Code</h3>
+          <ol class="procedure">
+            <li>
+              <p>
+                <a href="https://code.visualstudio.com/">Download</a> and
+                install VS Code.
+              </p>
+            </li>
+            <li>
+              <p>
+                Open VS Code, and select the extensions icon (<img
+                  src="./images/extension.png"
+                  alt=""
+                  title="Live Server icon"
+                />) from the left-hand menu.
+              </p>
+            </li>
+            <li>
+              <p>
+                Search for &quot;live server&quot; and install the Live Server
+                extension.
+              </p>
+
+              <img
+                src="./images/live-server.png"
+                alt="You can find the live server extension in VS Code's extension marketplace."
+                title="Live server extension"
+              />
+            </li>
+          </ol>
+
+          <h3 id="create-a-local-project">Create a local project</h3>
+          <p>
+            Now that you have VS Code installed, it's time to set up a project.
+            I put together a starter for you as a basic reference.
+          </p>
+
+          <h4>Download a GitHub project</h4>
+          <ol class="procedure">
+            <li>
+              <p>
+                Go to the
+                <a href="https://github.com/bobby-pancakes/basic-portfolio"
+                  >WTD-basic-portfolio</a
+                >
+                created by user Bobby Pancakes (an alias I created for this
+                project).
+              </p>
+            </li>
+            <li>
+              <p>
+                Click the green Code button, then select
+                <span class="bold">Download ZIP</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Extract the downloaded folder somewhere on your local computer.
+              </p>
+            </li>
+            <li>
+              <p>
+                In VS Code, open the downloaded project. It should look
+                something like this:
+              </p>
+              <img
+                src="./images/project.png"
+                alt="Project structure"
+                title="Project structure"
+              />
+            </li>
+          </ol>
+
+          <h4 id="preview-your-site-locally">Preview your site locally</h4>
+          <p>
+            One benefit of web development is quickly seeing how your changes
+            affect your site. With the Live Server extension installed, you can
+            preview your site before you upload it to GitHub. Read on to see
+            how.
+          </p>
+          <ol class="procedure">
+            <li>
+              <p>
+                In VS Code, right-click the
+                <span class="italicize">index.html</span> file the left-hand
+                navigation, then select
+                <span class="bold">Open with Live Server</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Live Server should automatically open a new tab in your browser
+                and you'll see your site. If not, enter
+                <code>localhost:&#60;portNumber></code> in your browser's URL
+                bar. Replace <code>&#60;portNumber></code> with the port number
+                you can find in VS Code:
+              </p>
+              <img
+                src="./images/port.png"
+                alt="Live Server indicates which port you can preview your site on."
+                title="Live Server port"
+              />
+              <p class="admonition note">
+                <span class="bold">Note:</span> Typically, Live Server uses
+                <code>localhost:5000</code>, but it'll be different if something
+                else is using the default port. You can find your port in VS
+                Code's lower-right status bar.
+              </p>
+            </li>
+          </ol>
+
+          <h4 id="making-the-magic">Making the magic</h4>
+          <p>
+            This is where you get creative. Start with the design and layout or
+            write your content, then design around it. This is your portfolio,
+            build it however you want. If you're not sure where to start, take a
+            look at this section's resources and the
+            <a href="#portfolio-examples">Portfolio examples</a> section.
+          </p>
+
+          <p>
+            When you're ready, move on to
+            <a href="#upload-to-netlify">Upload your site to Netlify</a>.
+          </p>
+
+          <h3 id="vs-code-extensions">VS Code extensions</h3>
+          <p>
+            There are many useful VS Code extensions. Here are some that I
+            recommend.
+          </p>
+
+          <h4 id="utilities">Utilities</h4>
+          <ul>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+                >Prettier</a
+              >. A linter that supports auto formatting for many programming
+              languages.
+            </li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer"
+                >Live Server</a
+              >. Makes it easy to preview your website on your laptop.
+            </li>
+          </ul>
+
+          <h4 id="themes">Themes</h4>
+          <ul>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda"
+                >Panda Theme</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code"
+                >Nord</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=huytd.nord-light"
+                >Nord Light</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme"
+                >One Dark Pro</a
+              >
+            </li>
+          </ul>
+
+          <h3 id="resources-2">Resources</h3>
+
+          <h4 id="html-links">HTML</h4>
+          <ul>
+            <li>
+              <a href="https://meettheipsums.com/">Meet the Ipsums</a>. A
+              collection of Lorem Ipsum generators from around the internet.
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/semantic-html5-elements/"
+                >FreeCodeCamp article about semantic HTML5</a
+              >. This is a good primer for HTML5 elements and how, why, and when
+              you should use them.
+            </li>
+            <li>
+              <a href="https://www.w3.org/People/Raggett/book4/ch02.html"
+                >W3 chapter about the history of the internet</a
+              >. If you want to take a deep dive into why HTML is the way it is.
+            </li>
+          </ul>
+
+          <h4 id="css-links">CSS</h4>
+          <ul>
+            <li>
+              <a href="https://gridbyexample.com/">Grid by Example</a>.
+              Fantastic resource for learning CSS Grid, which I highly
+              recommend.
+            </li>
+            <li>
+              <a href="https://colordesigner.io/">Color Designer</a>. A great
+              free web-based tool for building color themes. Also, check out
+              <a href="http://colormind.io/">Colormind</a>.
+            </li>
+            <li>
+              <a href="https://css-tricks.com/">CSS Tricks</a>. One of the best
+              places to learn about CSS. Extensive library of articles about
+              anything you could think of - almost always with examples.
+            </li>
+          </ul>
+        </section>
+
+        <section class="topic">
+          <h2 id="set-up-netlify">Set up Netlify</h2>
+
+          <p>
+            Netlify will host your web portfolio for free. If you have your own
+            domain name, you can set up Netlify to work with it. If you don't,
+            Netlify will give you a Netlify sub-domain for free.
+          </p>
+          <p class="admonition">
+            <span class="bold">Tip:</span> Netlify offers automatic
+            <a
+              href="https://docs.netlify.com/domains-https/https-ssl/#certificate-service-types"
+              >free HTTPS certificates</a
+            >
+            for sites hosted on their platform with custom domains.
+          </p>
+          <p>For further details refer to this section's resources.</p>
+
+          <h3 id="upload-to-netlify">Upload your site to Netlify</h3>
+          <ol class="procedure">
+            <li>
+              <p>
+                Go to
+                <a href="https://app.netlify.com"
+                  >Netlify.com and select <span class="bold">Sign up</span></a
+                >.
+              </p>
+            </li>
+            <li>
+              <p>
+                Select <span class="bold">Sign up for free</span>, then
+                <span class="bold">Sign up with email</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Enter your email address and desired password, then select
+                <span class="bold">Sign up</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find the email that Netlify sent to your email address and
+                select <span class="bold">Verify email</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Fill out the form, then select
+                <span class="bold">Continue to deploy</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                On the next page, under
+                <span class="bold">Get started another way</span>, select
+                <span class="bold">Try Netlify Drop</span>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Upload your website's folder by draggin and drop or selecting
+                <span class="bold">browse to upload</span>.
+              </p>
+              <p>
+                Netlify will automatically host your site for you with a random
+                site name on a Netlify subdomain.
+              </p>
+            </li>
+          </ol>
+
+          <h3 id="resources-1">Resources</h3>
+          <ul>
+            <li>
+              <a href="https://docs.netlify.com/">Netlify docs</a>
+            </li>
+            <li>
+              <a
+                href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/"
+                >Setting up your own domain name on Netlify</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="topic">
+          <h2 id="review-your-live-website-and-make-changes-as-necessary">
+            Review your live website and make changes as necessary
+          </h2>
+          <p>
+            After you've uploaded your HTML, CSS, and any other files (like
+            images and sample docs), Netlify will make your site available on
+            the internet.
+          </p>
+          <p>
+            To update your site, you'll need to upload all of your site's files
+            again.
+          </p>
+
+          <h3 id="check-your-site-publishing-status">
+            Check your site's publishing status
+          </h3>
+          <ol class="procedure">
+            <li>
+              <p>
+                In Netlify, on the <span class="bold">Sites</span> tab, select
+                your site, then select <span class="bold">Deploys</span>.
+              </p>
+              <img
+                src="./images/deploy.png"
+                alt="Netlify shows deploy statuses."
+                title="Netlify deploy status"
+              />
+            </li>
+            <li>
+              <p>
+                Check the status of the latest deploy. It should have one of the
+                following tags:
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <span class="bold">Published.</span> Successfully deployed
+                    and ready to view at your site's URL.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <span class="bold">Building.</span> Processing your site's
+                    files and setting up deployment.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <span class="bold">Failed.</span> Something didn't work.
+                    Check the deployment logs for details.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            After your site is published, all you need to do is refresh your
+            browser to see the updates.
+          </p>
+
+          <h3 id="view-your-portfolio">View your portfolio</h3>
+          <p>
+            Well, you did all of that work. So, how do you view it? If you
+            didn't set up a custom domain name, Netlify automatically creates a
+            random URL for your website. This URL won't change after it's
+            assigned to your site.
+          </p>
+          <ol class="procedure">
+            <li>
+              <p>
+                In Netlify, on the <span class="bold">Site overview</span> tab,
+                find the site information card.
+              </p>
+              <img
+                src="./images/site-url.png"
+                alt="Netlify site URL location."
+                title="Netlify site URL"
+              />
+            </li>
+            <li>
+              <p>
+                Click the link in the site information card, or copy it and
+                share it with others.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="topic">
+          <h2 id="portfolio-examples">Portfolio examples</h2>
+          <p>
+            Here are some portfolio examples you can draw inspiration from. They
+            all have strong design and good UX.
+          </p>
+          <p>
+            I don't know any of these people. I came across their sites by
+            googling for relevant portfolios.
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.stephanieodili.com"
+                >Stephanie Chizoba Odili</a
+              >.
+              <p>
+                Basic, but effective design. Could easily be done with just HTML
+                and CSS.
+              </p>
+            </li>
+            <li>
+              <a href="https://www.straygoat.co.uk/"
+                >Craig Wright - Freelance Technical Writer</a
+              >.
+              <p>
+                Comprehensive website that could be made with just HTML.
+                Includes a portfolio, case studies, and other content
+              </p>
+            </li>
+            <li>
+              <a href="https://www.kaylalewkowicz.com/">Kayla Lewkowicz</a>.
+              <p>Effective layout that's easy to do without any JavaScript.</p>
+            </li>
+            <li>
+              <a href="https://www.chelsealpalmer.com/home/">Chelsea Palmer</a>.
+              <p>Elegant layout with some fun style. No JavaScript required.</p>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
