@@ -143,6 +143,13 @@ p.first-paragraph {
   font-size: 115%;
 }
 
+li p img {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: -2px;
+  max-height: 1em;
+}
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
@@ -205,6 +212,9 @@ li img {
   display: block;
   margin-top: 1rem;
   margin-bottom: 3rem;
+  border: 1px solid;
+  border-color: var(--color-font);
+  border-radius: 3px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
@@ -389,6 +399,14 @@ header a:hover {
 
 /* Content styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bold {
+  font-weight: 600;
+}
+
+.italicize {
+  font-style: italic;
+}
+
 .content {
   width: 80%;
   max-width: 900px;
@@ -412,9 +430,9 @@ header a:hover {
   list-style-type: disc;
 }
 
-.tip {
+.admonition {
   font-size: 1.7rem;
-  margin-left: 2em;
+  margin-right: 1em;
   padding: 1em 2em;
   background-color: rgba(30, 174, 219, 0.1);
   border-left: 5px solid var(--gradient8);
@@ -425,14 +443,8 @@ header a:hover {
 
 .note {
   display: inline-block;
-  font-size: 1.7rem;
-  margin: 1em 2em;
-  padding: 1em 2em;
   background-color: rgba(51, 51, 51, 0.1);
   border-left: 5px solid var(--color-font);
-  border-radius: 3px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .inline-image {

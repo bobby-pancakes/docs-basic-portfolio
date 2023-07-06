@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="./css/main.css" />
   <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
     rel="stylesheet" />
@@ -45,20 +46,6 @@
           <a href="#what-you-wont-need">What you won't need</a>
         </li>
         <li>
-          <a href="#set-up-netlify">Set up Netlify</a>
-          <ul>
-            <li data-level="2">
-              <a href="#create-a-netlify-account">Create a Netlify
-                account</a>
-            </li>
-            <li data-level="2">
-              <a href="#point-netlify-at-your-github-repository">Point
-                Netlify at your GitHub repository</a>
-            </li>
-            <li data-level="2"><a href="#resources-1">Resources</a></li>
-          </ul>
-        </li>
-        <li>
           <a href="#set-up-your-local-workspace">Set up your local workspace</a>
           <ul>
             <li data-level="2">
@@ -91,20 +78,17 @@
           </ul>
         </li>
         <li>
-          <a href="#add-your-html-and-css-to-your-github-repo">Add your HTML and
-            CSS to your GitHub repo</a>
+          <a href="#set-up-netlify">Set up Netlify</a>
           <ul>
             <li data-level="2">
-              <a href="#upload-your-files-to-github">Upload your files to
-                GitHub</a>
+              <a href="#upload-to-netlify">Upload to Netlify</a>
             </li>
-            <li data-level="2"><a href="#resources-3">Resources</a></li>
+            <li data-level="2"><a href="#resources-1">Resources</a></li>
           </ul>
         </li>
         <li>
           <a href="#review-your-live-website-and-make-changes-as-necessary">Review
-            your live website and make changes as
-            necessary</a>
+            your site</a>
           <ul>
             <li data-level="2">
               <a href="#check-your-site-publishing-status">Check your
@@ -166,119 +150,12 @@
       </section>
 
       <section class="topic">
-        <h2 id="set-up-netlify">Set up Netlify</h2>
-
-        <p>
-          Netlify will host your web portfolio for free. If you have your own
-          domain name, you can set up Netlify to work with it. If you don't,
-          Netlify will give you a Netlify sub-domain for free.
-        </p>
-        <p class="tip">
-          <strong>Tip:</strong> Netlify offers automatic
-          <a
-            href="https://docs.netlify.com/domains-https/https-ssl/#certificate-service-types">free
-            HTTPS
-            certificates</a>
-          for sites hosted on their platform with custom domains.
-        </p>
-        <p>For further details refer to this section's resources.</p>
-
-        <h3 id="create-a-netlify-account">Create a Netlify account</h3>
-        <ol class="procedure">
-          <li>
-            <p>
-              Go to <a href="https://www.netlify.com/">Netlify.com</a> and click
-              <strong>Sign up</strong>.
-            </p>
-          </li>
-          <li>
-            <p>Select the GitHub option.</p>
-            <p>
-              This will link your Netlify and GitHub accounts, streamlining the
-              publishing process for your portfolio.
-            </p>
-          </li>
-          <li>
-            <p>
-              Authorize Netlify on your GitHub account by selecting
-              <strong>Authorize Netlify</strong>.
-            </p>
-
-            <img src="./images/netlify-and-github.png"
-              alt="GitHub sign up form with prominent call to action button."
-              title="GitHub sign up form" />
-          </li>
-        </ol>
-
-        <h3 id="point-netlify-at-your-github-repository">
-          Point Netlify at your GitHub repository
-        </h3>
-        <ol class="procedure">
-          <li>
-            <p>
-              In Netlify, on the <strong>Team overview</strong> page, select the
-              <strong>New site from git</strong> button.
-            </p>
-
-            <img src="./images/new-site.png"
-              alt="GitHub sign up form with prominent call to action button."
-              title="GitHub sign up form" />
-          </li>
-          <li>
-            <p>Under <strong>Continous deployment</strong>, select GitHub.</p>
-          </li>
-          <li>
-            <p>
-              Give Netlify permissions to verify your identity and act in GitHub
-              on your behalf by selecting <strong>Authorize Netlify</strong>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Set the scope of the Netlify integration by choosing** Select
-              repositories only**, then click <strong>Install</strong>.
-            </p>
-            <p class="note">
-              <strong>Note:</strong> You can optionally install Netlify for all
-              repositories on this GitHub account. I don't recommend that, as
-              it's not necessary.
-            </p>
-
-            <img src="./images/scope.png"
-              alt="GitHub sign up form with prominent call to action button."
-              title="GitHub sign up form" />
-          </li>
-          <li>
-            <p>
-              Under <strong>Continuous Deployment: GitHub App</strong>, click on
-              your portfolio repository.
-            </p>
-          </li>
-          <li>
-            <p>
-              Confirm your deployment settings (the defaults should be fine if
-              you've followed this walkthrough), then click
-              <strong>Deploy site</strong>.
-            </p>
-          </li>
-        </ol>
-
-        <h3 id="resources-1">Resources</h3>
-        <ul>
-          <li>
-            <a href="https://docs.netlify.com/">Netlify docs</a>
-          </li>
-          <li>
-            <a
-              href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/">Setting
-              up your own
-              domain name on Netlify</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="topic">
         <h2 id="set-up-your-local-workspace">Set up your local workspace</h2>
+
+        <p>To get started on your portfolio site, you need to the right tools.
+          These are all free tools that are commonly used by professionals, but
+          you don't need any experience to get started with them.
+        </p>
 
         <h3 id="install-vs-code">Install VS Code</h3>
         <ol class="procedure">
@@ -291,9 +168,8 @@
           <li>
             <p>
               Open VS Code, and select the extensions icon
-              <img src="./images/extension.png"
-                alt="GitHub sign up form with prominent call to action button."
-                title="GitHub sign up form" class="inline-image" />
+              (<img src="./images/extension.png" alt=""
+                title="Live Server icon" />)
               from the left-hand menu.
             </p>
           </li>
@@ -304,8 +180,8 @@
             </p>
 
             <img src="./images/live-server.png"
-              alt="GitHub sign up form with prominent call to action button."
-              title="GitHub sign up form" />
+              alt="You can find the live server extension in VS Code's extension marketplace."
+              title="Live server extension" />
           </li>
         </ol>
 
@@ -315,7 +191,7 @@
           put together a starter for you as a basic reference.
         </p>
 
-        <h4>Dowload a GitHub project</h4>
+        <h4>Download a GitHub project</h4>
         <ol class="procedure">
           <li>
             <p>
@@ -327,7 +203,8 @@
             </p>
           </li>
           <li>
-            <p>Click the green Code button, then select Download ZIP.</p>
+            <p>Click the green Code button, then select <span
+                class="bold">Download ZIP</span>.</p>
           </li>
           <li>
             <p>
@@ -353,8 +230,10 @@
         <ol class="procedure">
           <li>
             <p>
-              In VS Code, right-click the index.html file the left-hand
-              navigation, then select <strong>Open with Live Server</strong>.
+              In VS Code, right-click the <span
+                class="italicize">index.html</span> file the left-hand
+              navigation, then select <span class="bold">Open with Live
+                Server</span>.
             </p>
           </li>
           <li>
@@ -362,14 +241,17 @@
               Live Server should automatically open a new tab in your browser
               and you'll see your site. If not, enter
               <code>localhost:&#60;portNumber></code> in your browser's URL bar.
+              Replace <code>&#60;portNumber></code> with the port number you can
+              find in VS Code:
             </p>
             <img src="./images/port.png"
               alt="Live Server indicates which port you can preview your site on."
               title="Live Server port" />
-            <p class="note">
-              <strong>Note:</strong> Typically, Live Server uses
-              <code>localhost:5000</code>, but if that's not available, it'll be
-              different. You can find your port in VS Code's lower-right status
+            <p class="admonition note">
+              <span class="bold">Note:</span> Typically, Live Server uses
+              <code>localhost:5000</code>, but it'll be
+              different if something else is using the default port. You can
+              find your port in VS Code's lower-right status
               bar.
             </p>
           </li>
@@ -386,8 +268,7 @@
 
         <p>
           When you're ready, move on to
-          <a href="#uploading-your-files-to-github">Uploading your files to
-            GitHub</a>.
+          <a href="#upload-to-netlify">Upload your site to Netlify</a>.
         </p>
 
         <h3 id="vs-code-extensions">VS Code extensions</h3>
@@ -479,16 +360,91 @@
       </section>
 
       <section class="topic">
+        <h2 id="set-up-netlify">Set up Netlify</h2>
+
+        <p>
+          Netlify will host your web portfolio for free. If you have your own
+          domain name, you can set up Netlify to work with it. If you don't,
+          Netlify will give you a Netlify sub-domain for free.
+        </p>
+        <p class="admonition">
+          <span class="bold">Tip:</span> Netlify offers automatic
+          <a
+            href="https://docs.netlify.com/domains-https/https-ssl/#certificate-service-types">free
+            HTTPS
+            certificates</a>
+          for sites hosted on their platform with custom domains.
+        </p>
+        <p>For further details refer to this section's resources.</p>
+
+        <h3 id="upload-to-netlify">Upload your site to Netlify</h3>
+        <ol class="procedure">
+          <li>
+            <p>
+              Go to <a href="https://app.netlify.com">Netlify.com and select
+                <span class="bold">Sign up</span></a>.
+            </p>
+          </li>
+          <li>
+            <p>Select <span class="bold">Sign up for free</span>, then <span
+                class="bold">Sign up with email</span>.</p>
+          </li>
+          <li>
+            <p>Enter your email address and desired password, then select <span
+                class="bold">Sign up</span>.</p>
+          </li>
+          <li>
+            <p>Find the email that Netlify sent to your email address and select
+              <span class="bold">Verify email</span>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Fill out the form, then select <span class="bold">Continue to
+                deploy</span>.
+            </p>
+          </li>
+          <li>
+            <p>
+              On the next page, under <span class="bold">Get started another
+                way</span>, select <span class="bold">Try Netlify Drop</span>.
+            </p>
+          </li>
+          <li>
+            <p>Upload your website's folder by draggin and drop or selecting
+              <span class="bold">browse to upload</span>.
+            </p>
+            <p>Netlify will automatically host your site for you with a random
+              site name on a Netlify subdomain.</p>
+          </li>
+        </ol>
+
+        <h3 id="resources-1">Resources</h3>
+        <ul>
+          <li>
+            <a href="https://docs.netlify.com/">Netlify docs</a>
+          </li>
+          <li>
+            <a
+              href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/">Setting
+              up your own
+              domain name on Netlify</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="topic">
         <h2 id="review-your-live-website-and-make-changes-as-necessary">
           Review your live website and make changes as necessary
         </h2>
         <p>
           After you've uploaded your HTML, CSS, and any other files (like images
-          and sample docs), Netlify will automatically update your site.
+          and sample docs), Netlify will make your site available on the
+          internet.
         </p>
         <p>
-          It does this by watching your GitHub repository. When there's a
-          change, it automatically pulls the updated files and builds your site.
+          To update your site, you'll need to upload all of your site's files
+          again.
         </p>
 
         <h3 id="check-your-site-publishing-status">
@@ -497,34 +453,37 @@
         <ol class="procedure">
           <li>
             <p>
-              In Netlify, on the <strong>Site overview</strong> tab, find the
-              <strong>Production deploys</strong> section.
+              In Netlify, on the <span class="bold">Sites</span> tab, select
+              your site, then select <span class="bold">Deploys</span>.
             </p>
             <img src="./images/deploy.png" alt="Netlify shows deploy statuses."
               title="Netlify deploy status" />
           </li>
           <li>
             <p>
-              Check the status of the lates deploy. It should have one of the
+              Check the status of the latest deploy. It should have one of the
               following tags:
             </p>
 
             <ul>
               <li>
                 <p>
-                  <strong>Published.</strong> Successfully deployed and ready to
+                  <span class="bold">Published.</span> Successfully deployed and
+                  ready to
                   view at your site's URL.
                 </p>
               </li>
               <li>
                 <p>
-                  <strong>Building.</strong> Processing your GitHub repo's files
+                  <span class="bold">Building.</span> Processing your site's
+                  files
                   and setting up deployment.
                 </p>
               </li>
               <li>
                 <p>
-                  <strong>Failed.</strong> Something didn't work. Check the
+                  <span class="bold">Failed.</span> Something didn't work. Check
+                  the
                   deployment logs for details.
                 </p>
               </li>
@@ -546,7 +505,8 @@
         <ol class="procedure">
           <li>
             <p>
-              In Netlify, on the <strong>Site overview</strong> tab, find the
+              In Netlify, on the <span class="bold">Site overview</span> tab,
+              find the
               site information card.
             </p>
             <img src="./images/site-url.png" alt="Netlify site URL location."
@@ -564,12 +524,12 @@
       <section class="topic">
         <h2 id="portfolio-examples">Portfolio examples</h2>
         <p>
-          Here are some writer portfolio examples. These are not technical
-          writer portfolios. However, they all have strong design and good UX.
+          Here are some portfolio examples you can draw inspiration from.
+          They all have strong design and good UX.
         </p>
         <p>
           I don't know any of these people. I came across their sites by
-          googling for writer portfolios.
+          googling for relevant portfolios.
         </p>
         <ul>
           <li>
